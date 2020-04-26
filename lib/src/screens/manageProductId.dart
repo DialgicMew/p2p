@@ -1,4 +1,5 @@
 import 'package:fds/src/widgets/appBar.dart';
+import '../widgets/textInput.dart';
 import 'package:flutter/material.dart';
 
 class ManageProductId extends StatelessWidget {
@@ -7,38 +8,36 @@ class ManageProductId extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Color(0xffF0F1F0),
         appBar: AppBarCustom('Manage Product', context).returnWidget(),
         body: Center(
-          child: Container(
+          child: ListView(
             padding: EdgeInsets.symmetric(horizontal: 20),
-            color: Color(0xffF2F5FB),
-            child: ListView(
-              scrollDirection: Axis.vertical,
-              children: <Widget>[
-                ImageWidget(),
-                SwitchClass(),
-                TextWithController(
-                  'Product Name',
-                  TextEditingController(
-                    text: 'Burger',
-                  ),
+            scrollDirection: Axis.vertical,
+            children: <Widget>[
+              ImageWidget(),
+              SwitchClass(),
+              TextInput(
+                labelText: 'Product Name',
+                controller: TextEditingController(
+                  text: 'Burger',
                 ),
-                TextWithController(
-                  'Cost',
-                  TextEditingController(
-                    text: '200',
-                  ),
+              ),
+              TextInput(
+                labelText: 'Cost',
+                controller: TextEditingController(
+                  text: '200',
                 ),
-                TextWithController(
-                  'Product Description',
-                  TextEditingController(
-                    text:
-                        'A loaf of bread with beef in the centre. Cheese is available in the centre!',
-                  ),
+              ),
+              TextInput(
+                labelText: 'Product Description',
+                controller: TextEditingController(
+                  text:
+                      'A loaf of bread with beef in the centre. Cheese is available in the centre!',
                 ),
-                DeleteButton(),
-              ],
-            ),
+              ),
+              DeleteButton(),
+            ],
           ),
         ),
       ),
@@ -69,87 +68,6 @@ class ImageWidget extends StatelessWidget {
           ),
           color: Colors.teal,
         ),
-      ),
-    );
-  }
-}
-
-class TextWithController extends StatelessWidget {
-  const TextWithController(this.labelText, this.controller);
-  final String labelText;
-  final TextEditingController controller;
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.symmetric(
-          vertical: MediaQuery.of(context).size.height * 0.015),
-      child: TextField(
-        keyboardType: TextInputType.multiline,
-        maxLines: null,
-        controller: controller,
-        style: TextStyle(
-          color: Color(0xff283060),
-          fontSize: 20,
-        ),
-        decoration: new InputDecoration(
-          filled: true,
-          fillColor: Colors.white,
-          focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.all(
-              Radius.circular(10),
-            ),
-            borderSide: BorderSide(width: 1, color: Colors.transparent),
-          ),
-          disabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.all(
-              Radius.circular(10),
-            ),
-            borderSide: BorderSide(width: 1, color: Colors.grey),
-          ),
-          enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.all(
-              Radius.circular(10),
-            ),
-            borderSide: BorderSide(width: 1, color: Colors.transparent),
-          ),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.all(
-              Radius.circular(10),
-            ),
-            borderSide: BorderSide(
-              width: 1,
-            ),
-          ),
-          errorBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.all(
-                Radius.circular(10),
-              ),
-              borderSide: BorderSide(width: 1, color: Colors.red)),
-          focusedErrorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.all(
-              Radius.circular(10),
-            ),
-            borderSide: BorderSide(width: 1, color: Colors.red),
-          ),
-          labelText: labelText,
-          labelStyle: TextStyle(
-            color: Colors.grey,
-            fontWeight: FontWeight.w400,
-            fontSize: 20,
-          ),
-        ),
-      ),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(
-          Radius.circular(10),
-        ),
-        boxShadow: [
-          BoxShadow(
-            color: Color(0xffcfd8dc),
-            offset: Offset(0, 0),
-            blurRadius: 5,
-          )
-        ],
       ),
     );
   }
@@ -213,7 +131,7 @@ class DeleteButton extends StatelessWidget {
         child: Align(
           alignment: Alignment.center,
           child: Text(
-            'delete',
+            'Delete',
             style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.w400,
@@ -224,7 +142,7 @@ class DeleteButton extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.red,
           borderRadius: BorderRadius.all(
-            Radius.circular(10),
+            Radius.circular(50),
           ),
         ),
       ),

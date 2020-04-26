@@ -16,8 +16,18 @@ class CustomListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(
-          vertical: MediaQuery.of(context).size.height * 0.015),
+      margin: MediaQuery.of(context).orientation == Orientation.portrait
+          ? EdgeInsets.symmetric(
+              vertical: MediaQuery.of(context).size.height * 0.01,
+              horizontal: MediaQuery.of(context).size.width * 0.03)
+          : EdgeInsets.symmetric(
+              vertical: MediaQuery.of(context).size.height * 0.015,
+              horizontal: MediaQuery.of(context).size.width * 0.02),
+      width: MediaQuery.of(context).size.width * 0.9,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.all(Radius.circular(20)),
+      ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -80,15 +90,16 @@ class _VideoDescription extends StatelessWidget {
               horizontal: MediaQuery.of(context).size.width * 0.05),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Text(
-                title.length > 10 ? title.substring(0, 13) : title,
+                title.length > 15 ? title.substring(0, 15) : title,
                 style: TextStyle(
                   color: Color(0xff37474f),
-                  fontWeight: FontWeight.w500,
+                  fontWeight: FontWeight.bold,
                   fontSize:
                       MediaQuery.of(context).orientation == Orientation.portrait
                           ? 20
@@ -111,6 +122,7 @@ class _VideoDescription extends StatelessWidget {
             'Qty: $qty',
             style: TextStyle(
               color: Color(0xff37474f),
+              fontWeight: FontWeight.bold,
               fontSize:
                   MediaQuery.of(context).orientation == Orientation.portrait
                       ? 15

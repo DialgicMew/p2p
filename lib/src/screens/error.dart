@@ -8,6 +8,7 @@ class Error extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Color(0xffF0F1F0),
         appBar: AppBarCustom('Settings', context).returnWidget(),
         body: Center(
           child: Container(

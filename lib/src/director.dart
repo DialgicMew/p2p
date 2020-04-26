@@ -36,6 +36,7 @@ class _BottomState extends State<Bottom> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Color(0xffF0F1F0),
         floatingActionButton: _selectedIndex == 1
             ? FloatingActionButton.extended(
                 label: Text('ADD'),
@@ -46,12 +47,10 @@ class _BottomState extends State<Bottom> {
                 backgroundColor: Colors.pink,
               )
             : null,
-        body: Container(
-          decoration: BoxDecoration(color: Color(0xffF2F5FB)),
-          child: Center(
-            child: _getPage(_selectedIndex),
-          ),
+        body: Center(
+          child: _getPage(_selectedIndex),
         ),
+
         //This is a custom navbar, it's called fanceBottomNavigation. Can get documentation.
         //This is stateful widget, it's very linked with _getPage(), _getPage looks at current
         //index and fetches that page into the body of the Scaffold.

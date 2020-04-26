@@ -6,35 +6,30 @@ class Receipt extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Container(
-        //Container to wrap entire page.
-        color: Color(0xffF2F5FB),
-        //ListView to show the entire page.
-        child: ListView(
-          scrollDirection: Axis.vertical,
-          children: <Widget>[
-            Column(
-              children: <Widget>[
-                TotalMoney(200),
-                Text(
-                  'Total Orders',
-                  style: TextStyle(
-                    fontSize: 25,
-                  ),
+      child: ListView(
+        scrollDirection: Axis.vertical,
+        children: <Widget>[
+          Column(
+            children: <Widget>[
+              TotalMoney(200),
+              Text(
+                'Total Orders',
+                style: TextStyle(
+                  fontSize: 25,
                 ),
-                SizedBox(height: 10, width: double.infinity),
-              ],
-            ),
-            //tiles for display
-            ReusableTile(),
-            ReusableTile(),
-            ReusableTile(),
-            ReusableTile(),
-            ReusableTile(),
-            ReusableTile(),
-            ReusableTile(),
-          ],
-        ),
+              ),
+              SizedBox(height: 10, width: double.infinity),
+            ],
+          ),
+          //tiles for display
+          ReusableTile(),
+          ReusableTile(),
+          ReusableTile(),
+          ReusableTile(),
+          ReusableTile(),
+          ReusableTile(),
+          ReusableTile(),
+        ],
       ),
     );
   }

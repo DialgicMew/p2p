@@ -9,27 +9,25 @@ class Profile extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Color(0xffF0F1F0),
         appBar: AppBarCustom('Profile', context).returnWidget(),
         body: Center(
-          child: Container(
+          child: ListView(
             padding: EdgeInsets.symmetric(horizontal: 20),
-            color: Color(0xffF2F5FB),
-            child: ListView(
-              scrollDirection: Axis.vertical,
-              children: <Widget>[
-                Column(
-                  children: <Widget>[
-                    ImageOval(),
-                  ],
-                ),
-                TextInput('Name'),
-                TextInput('Gender'),
-                TextInput('Mobile'),
-                TextInput('Email'),
-                TextInput('Birthday'),
-                SaveButton(),
-              ],
-            ),
+            scrollDirection: Axis.vertical,
+            children: <Widget>[
+              Column(
+                children: <Widget>[
+                  ImageOval(),
+                ],
+              ),
+              TextInput(labelText: 'Name'),
+              TextInput(labelText: 'Gender'),
+              TextInput(labelText: 'Mobile'),
+              TextInput(labelText: 'Email'),
+              TextInput(labelText: 'Birthday'),
+              SaveButton(),
+            ],
           ),
         ),
       ),
@@ -51,7 +49,7 @@ class SaveButton extends StatelessWidget {
         child: Align(
           alignment: Alignment.center,
           child: Text(
-            'save',
+            'Save',
             style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.w400,
@@ -62,7 +60,7 @@ class SaveButton extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.green,
           borderRadius: BorderRadius.all(
-            Radius.circular(10),
+            Radius.circular(50),
           ),
         ),
       ),

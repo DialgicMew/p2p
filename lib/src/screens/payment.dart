@@ -8,25 +8,23 @@ class Payment extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Color(0xffF0F1F0),
         appBar: AppBarCustom('Payment', context).returnWidget(),
         body: Center(
-          child: Container(
+          child: ListView(
             padding: EdgeInsets.only(
               left: 20,
               right: 20,
               top: MediaQuery.of(context).size.height * 0.01,
             ),
-            color: Color(0xffF2F5FB),
-            child: ListView(
-              scrollDirection: Axis.vertical,
-              children: <Widget>[
-                TextInput('Account Name'),
-                TextInput('Account Number'),
-                TextInput('Bank Name'),
-                TextInput('IFSC Code'),
-                SaveButton(),
-              ],
-            ),
+            scrollDirection: Axis.vertical,
+            children: <Widget>[
+              TextInput(labelText: 'Account Name'),
+              TextInput(labelText: 'Account Number'),
+              TextInput(labelText: 'Bank Name'),
+              TextInput(labelText: 'IFSC Code'),
+              SaveButton(),
+            ],
           ),
         ),
       ),
@@ -48,7 +46,7 @@ class SaveButton extends StatelessWidget {
         child: Align(
           alignment: Alignment.center,
           child: Text(
-            'save',
+            'Save',
             style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.w400,
@@ -59,7 +57,7 @@ class SaveButton extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.green,
           borderRadius: BorderRadius.all(
-            Radius.circular(10),
+            Radius.circular(50),
           ),
         ),
       ),

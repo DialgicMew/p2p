@@ -55,13 +55,6 @@ class ReusableTile extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(30),
-        boxShadow: [
-          BoxShadow(
-            color: Color(0xffcfd8dc),
-            offset: Offset(0, 0),
-            blurRadius: 8,
-          )
-        ],
       ),
     );
   }

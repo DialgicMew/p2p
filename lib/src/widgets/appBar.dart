@@ -17,7 +17,7 @@ class AppBarCustom {
           fontSize: 25,
         ),
       ),
-      backgroundColor: Color(0xffF2F5FB),
+      backgroundColor: Color(0xffF0F1F0),
       elevation: 0,
       leading: IconButton(
         icon: Icon(EvaIcons.arrowIosBackOutline),

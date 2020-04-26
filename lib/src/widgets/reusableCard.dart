@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import '../screens/manageProductId.dart';
 
 class ReusableCard extends StatelessWidget {
-  final colour = Colors.white;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -11,40 +10,35 @@ class ReusableCard extends StatelessWidget {
       },
       child: Container(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            Flexible(
+            Expanded(
+              flex: 1,
               child: ImageWidget('assets/images.jpg'),
-              flex: 4,
-              fit: FlexFit.tight,
             ),
-            SizedBox(height: 10, width: double.infinity),
-            Flexible(
-              child: TextWidget('Burger'),
+            Expanded(
               flex: 1,
-            ),
-            SizedBox(height: 10, width: double.infinity),
-            Flexible(
-              child: SubText('₹200'),
-              flex: 1,
-            ),
-            SizedBox(height: 10, width: double.infinity),
-            Flexible(
-              child: SubText('In-Stock'),
-              flex: 1,
-            ),
-          ],
-        ),
-        decoration: BoxDecoration(
-          color: colour,
-          borderRadius: BorderRadius.circular(40),
-          boxShadow: [
-            BoxShadow(
-              color: Color(0xffcfd8dc),
-              offset: Offset(0, 0),
-              blurRadius: 8,
+              child: Container(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: <Widget>[
+                    TextWidget('Burger'),
+                    SubText('₹' + '200'),
+                    SubText('In-Stock'),
+                  ],
+                ),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius:
+                      BorderRadius.vertical(bottom: Radius.circular(40)),
+                ),
+              ),
             )
           ],
+        ),
+        margin: EdgeInsets.all(10),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(40),
         ),
       ),
     );
@@ -80,6 +74,7 @@ class SubText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       displayContent,
+      textAlign: TextAlign.center,
       style: TextStyle(
         color: Color(0xff283060),
         fontWeight: FontWeight.w300,
@@ -97,6 +92,7 @@ class TextWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       content,
+      textAlign: TextAlign.center,
       style: TextStyle(
         color: Color(0xff283060),
         fontWeight: FontWeight.w500,

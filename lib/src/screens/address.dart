@@ -9,27 +9,25 @@ class Address extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Color(0xffF0F1F0),
         appBar: AppBarCustom('Address', context).returnWidget(),
         body: Center(
-          child: Container(
+          child: ListView(
             padding: EdgeInsets.only(
               left: 20,
               right: 20,
               top: MediaQuery.of(context).size.height * 0.01,
             ),
-            color: Color(0xffF2F5FB),
-            child: ListView(
-              scrollDirection: Axis.vertical,
-              children: <Widget>[
-                TextInput('Line 1'),
-                TextInput('Line 2'),
-                TextInput('District'),
-                TextInput('City'),
-                TextInput('Pincode'),
-                TextInput('State'),
-                SaveButton(),
-              ],
-            ),
+            scrollDirection: Axis.vertical,
+            children: <Widget>[
+              TextInput(labelText: 'Line 1'),
+              TextInput(labelText: 'Line 2'),
+              TextInput(labelText: 'District'),
+              TextInput(labelText: 'City'),
+              TextInput(labelText: 'Pincode'),
+              TextInput(labelText: 'State'),
+              SaveButton(),
+            ],
           ),
         ),
       ),
@@ -51,7 +49,7 @@ class SaveButton extends StatelessWidget {
         child: Align(
           alignment: Alignment.center,
           child: Text(
-            'save',
+            'Save',
             style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.w400,
@@ -62,7 +60,7 @@ class SaveButton extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.green,
           borderRadius: BorderRadius.all(
-            Radius.circular(10),
+            Radius.circular(50),
           ),
         ),
       ),
