@@ -74,7 +74,7 @@ class _CheckBoxRState extends State<CheckBoxR> {
   Widget build(BuildContext context) {
     return Container(
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           Text('Recieved'),
           Radio(
