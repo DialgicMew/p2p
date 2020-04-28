@@ -65,7 +65,7 @@ class _BottomState extends State<Bottom> {
           tabs: [
             TabData(
               iconData: OMIcons.receipt,
-              title: 'Receipt',
+              title: 'Orders',
             ),
             TabData(
               iconData: MyFlutterApp.spoon,

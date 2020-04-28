@@ -16,7 +16,7 @@ class ReusableTile extends StatelessWidget {
           'Vatsalya Singh',
           style: TextStyle(
             fontSize: 25,
-            color: Color(0xff37474f),
+            color: Color(0xff283060),
             fontWeight: FontWeight.w400,
           ),
         ),
@@ -45,16 +45,14 @@ class ReusableTile extends StatelessWidget {
           '₹20',
           style: TextStyle(
             fontSize: 30,
-            color: Colors.green,
+            color: Color(0xff283060),
           ),
         ),
       ),
-      margin: EdgeInsets.symmetric(horizontal: 10, vertical: 7),
-      height: 120,
-      width: MediaQuery.of(context).size.width * 0.8,
+      margin: EdgeInsets.symmetric(vertical: 7),
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(30),
+        borderRadius: BorderRadius.circular(20),
       ),
     );
   }
