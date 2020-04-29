@@ -61,13 +61,12 @@ class ImageWidget extends StatelessWidget {
             fit: BoxFit.cover,
           ),
         ),
-        margin: EdgeInsets.symmetric(
-            vertical: MediaQuery.of(context).size.height * 0.01),
+        margin:
+            EdgeInsets.only(bottom: MediaQuery.of(context).size.height * 0.01),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.all(
             Radius.circular(10),
           ),
-          color: Colors.teal,
         ),
       ),
     );

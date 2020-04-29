@@ -21,6 +21,7 @@ class TextInput extends StatelessWidget {
           controller: controller == null ? null : controller,
           cursorColor: Colors.black,
           keyboardType: TextInputType.multiline,
+          maxLines: null,
           textInputAction: TextInputAction.go,
           decoration: InputDecoration(
             labelText: labelText,

@@ -13,7 +13,7 @@ class AppBarCustom {
       title: Text(
         text,
         style: GoogleFonts.varelaRound(
-          color: Color(0xff283060),
+          color: Colors.black,
           fontSize: 25,
         ),
       ),
@@ -26,7 +26,7 @@ class AppBarCustom {
         },
       ),
       iconTheme: IconThemeData(
-        color: Color(0xff283060),
+        color: Colors.black,
       ),
     );
   }
