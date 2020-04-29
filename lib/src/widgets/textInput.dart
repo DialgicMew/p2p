@@ -13,7 +13,7 @@ class TextInput extends StatelessWidget {
       padding: EdgeInsets.all(5),
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(10),
       ),
       child: Center(
         child: TextField(
@@ -21,7 +21,6 @@ class TextInput extends StatelessWidget {
           controller: controller == null ? null : controller,
           cursorColor: Colors.black,
           keyboardType: TextInputType.multiline,
-          maxLines: null,
           textInputAction: TextInputAction.go,
           decoration: InputDecoration(
             labelText: labelText,

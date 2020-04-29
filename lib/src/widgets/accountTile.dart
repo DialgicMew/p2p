@@ -13,14 +13,14 @@ class AccountTile extends StatelessWidget {
       contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
       leading: Icon(
         icon,
-        color: Color(0xff283060),
+        color: Colors.black,
       ),
       title: Text(
         text,
         style: TextStyle(
           fontSize: 20,
           fontWeight: FontWeight.w300,
-          color: Color(0xff283060),
+          color: Colors.black,
         ),
       ),
     );

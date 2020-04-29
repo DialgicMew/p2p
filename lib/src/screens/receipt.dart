@@ -85,8 +85,8 @@ class TotalMoney extends StatelessWidget {
         textAlign: TextAlign.center,
         style: TextStyle(
           fontSize: 80,
-          fontWeight: FontWeight.w900,
-          color: Color(0xff283060),
+          fontWeight: FontWeight.w400,
+          color: Colors.black,
         ),
       ),
     );

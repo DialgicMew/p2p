@@ -41,7 +41,9 @@ class SaveButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.pop(context);
+      },
       child: Container(
         margin: EdgeInsets.symmetric(
             vertical: MediaQuery.of(context).size.height * 0.015),

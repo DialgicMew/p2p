@@ -36,6 +36,7 @@ class ManageProductId extends StatelessWidget {
                       'A loaf of bread with beef in the centre. Cheese is available in the centre!',
                 ),
               ),
+              SaveButton(),
               DeleteButton(),
             ],
           ),
@@ -53,7 +54,7 @@ class ImageWidget extends StatelessWidget {
       child: Container(
         child: ClipRRect(
           borderRadius: BorderRadius.all(
-            Radius.circular(30),
+            Radius.circular(10),
           ),
           child: Image.asset(
             'assets/images1.jpg',
@@ -64,7 +65,7 @@ class ImageWidget extends StatelessWidget {
             vertical: MediaQuery.of(context).size.height * 0.01),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.all(
-            Radius.circular(30),
+            Radius.circular(10),
           ),
           color: Colors.teal,
         ),
@@ -117,16 +118,53 @@ class _SwitchClassState extends State<SwitchClass> {
   }
 }
 
+class SaveButton extends StatelessWidget {
+  const SaveButton({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        Navigator.pop(context);
+      },
+      child: Container(
+        margin: EdgeInsets.symmetric(
+            vertical: MediaQuery.of(context).size.height * 0.005),
+        height: 50,
+        child: Align(
+          alignment: Alignment.center,
+          child: Text(
+            'Save',
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.w400,
+              fontSize: 20,
+            ),
+          ),
+        ),
+        decoration: BoxDecoration(
+          color: Colors.green,
+          borderRadius: BorderRadius.all(
+            Radius.circular(50),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
 class DeleteButton extends StatelessWidget {
   const DeleteButton({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.pop(context);
+      },
       child: Container(
         margin: EdgeInsets.symmetric(
-            vertical: MediaQuery.of(context).size.height * 0.015),
+            vertical: MediaQuery.of(context).size.height * 0.005),
         height: 50,
         child: Align(
           alignment: Alignment.center,

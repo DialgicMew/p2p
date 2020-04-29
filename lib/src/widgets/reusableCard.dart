@@ -30,7 +30,7 @@ class ReusableCard extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius:
-                      BorderRadius.vertical(bottom: Radius.circular(40)),
+                      BorderRadius.vertical(bottom: Radius.circular(10)),
                 ),
               ),
             )
@@ -38,7 +38,7 @@ class ReusableCard extends StatelessWidget {
         ),
         margin: EdgeInsets.all(10),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(40),
+          borderRadius: BorderRadius.circular(10),
         ),
       ),
     );
@@ -58,8 +58,8 @@ class ImageWidget extends StatelessWidget {
           fit: BoxFit.cover,
         ),
         borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(40),
-          topRight: Radius.circular(40),
+          topLeft: Radius.circular(10),
+          topRight: Radius.circular(10),
         ),
       ),
     );
@@ -76,9 +76,9 @@ class SubText extends StatelessWidget {
       displayContent,
       textAlign: TextAlign.center,
       style: TextStyle(
-        color: Color(0xff283060),
+        color: Colors.black,
         fontWeight: FontWeight.w300,
-        fontSize: 20,
+        fontSize: 18,
       ),
     );
   }
@@ -94,9 +94,9 @@ class TextWidget extends StatelessWidget {
       content,
       textAlign: TextAlign.center,
       style: TextStyle(
-        color: Color(0xff283060),
+        color: Colors.black,
         fontWeight: FontWeight.w500,
-        fontSize: 25,
+        fontSize: 20,
       ),
     );
   }

@@ -32,7 +32,7 @@ class Account extends StatelessWidget {
               Text(
                 'Vatsalya Singh',
                 style: TextStyle(
-                  color: Color(0xff283060),
+                  color: Colors.black,
                   fontSize: 25,
                   fontWeight: FontWeight.w300,
                 ),

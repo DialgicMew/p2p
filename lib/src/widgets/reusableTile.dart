@@ -11,12 +11,11 @@ class ReusableTile extends StatelessWidget {
         onTap: () {
           Navigator.pushNamed(context, OrderDetails.orderDetailsRoute);
         },
-        contentPadding: EdgeInsets.all(20),
         title: Text(
           'Vatsalya Singh',
           style: TextStyle(
-            fontSize: 25,
-            color: Color(0xff283060),
+            fontSize: 20,
+            color: Colors.black,
             fontWeight: FontWeight.w400,
           ),
         ),
@@ -26,7 +25,7 @@ class ReusableTile extends StatelessWidget {
             Text(
               'Caramel Milk',
               style: TextStyle(
-                fontSize: 20,
+                fontSize: 18,
                 color: Colors.grey,
                 fontWeight: FontWeight.w300,
               ),
@@ -34,7 +33,7 @@ class ReusableTile extends StatelessWidget {
             Text(
               'Sambhar',
               style: TextStyle(
-                fontSize: 20,
+                fontSize: 18,
                 color: Colors.grey,
                 fontWeight: FontWeight.w300,
               ),
@@ -44,11 +43,12 @@ class ReusableTile extends StatelessWidget {
         trailing: Text(
           '₹20',
           style: TextStyle(
-            fontSize: 30,
-            color: Color(0xff283060),
+            fontSize: 25,
+            color: Colors.black,
           ),
         ),
       ),
+      padding: EdgeInsets.all(7),
       margin: EdgeInsets.symmetric(vertical: 7),
       decoration: BoxDecoration(
         color: Colors.white,
