@@ -1,4 +1,5 @@
 import 'package:fds/src/screens/addProduct.dart';
+import 'package:fds/src/screens/data.dart';
 import 'package:flutter/material.dart';
 import 'director.dart';
 import './screens/profile.dart';
@@ -29,6 +30,10 @@ class Producer extends StatelessWidget {
       builder: (context) {
         switch (settings.name) {
           case '/':
+            {
+              return Data();
+            }
+          case Director.directorRoute:
             {
               return Director();
             }

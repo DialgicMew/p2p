@@ -101,17 +101,6 @@ class Details extends StatelessWidget {
               fontWeight: FontWeight.w200,
             ),
           ),
-          Text(
-            '1099',
-            style: TextStyle(
-              fontWeight: FontWeight.w100,
-              color: Colors.black38,
-              fontSize:
-                  MediaQuery.of(context).orientation == Orientation.portrait
-                      ? 20
-                      : 30,
-            ),
-          ),
         ],
       ),
       margin: MediaQuery.of(context).orientation == Orientation.portrait

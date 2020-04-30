@@ -11,8 +11,7 @@ import './screens/account.dart';
 //This page is basically what app.dart does in all tutorials.
 
 class Director extends StatelessWidget {
-  const Director({Key key}) : super(key: key);
-
+  static const directorRoute = 'Director';
   @override
   Widget build(BuildContext context) {
     return Bottom();

@@ -23,7 +23,7 @@ class Receipt extends StatelessWidget {
             margin: EdgeInsets.symmetric(vertical: 5),
             padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
             decoration: BoxDecoration(
-              color: Colors.grey,
+              color: Colors.blueGrey,
               borderRadius: BorderRadius.circular(6),
             ),
             child: Align(
@@ -40,7 +40,7 @@ class Receipt extends StatelessWidget {
             margin: EdgeInsets.symmetric(vertical: 5),
             padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
             decoration: BoxDecoration(
-              color: Colors.grey,
+              color: Colors.blueGrey,
               borderRadius: BorderRadius.circular(6),
             ),
             child: Align(
@@ -85,7 +85,8 @@ class TotalMoney extends StatelessWidget {
         textAlign: TextAlign.center,
         style: TextStyle(
           fontSize: 80,
-          fontWeight: FontWeight.w400,
+          fontFamily: 'Roboto',
+          fontWeight: FontWeight.w200,
           color: Colors.black,
         ),
       ),

@@ -1,5 +1,4 @@
 import 'package:fds/src/widgets/appBar.dart';
-// import 'package:fds/src/widgets/textInput.dart';
 import 'package:flutter/material.dart';
 
 class Error extends StatelessWidget {
@@ -9,7 +8,7 @@ class Error extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Color(0xffF0F1F0),
-        appBar: AppBarCustom('Settings', context).returnWidget(),
+        appBar: AppBarCustom('Error', context).returnWidget(),
         body: Center(
           child: Container(
             padding: EdgeInsets.only(

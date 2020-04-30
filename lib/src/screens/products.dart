@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import '../widgets/reusableCard.dart';
 
 class Products extends StatelessWidget {
-  const Products({Key key}) : super(key: key);
-
+  static const productsRoute = 'Products';
   @override
   Widget build(BuildContext context) {
     return Center(
